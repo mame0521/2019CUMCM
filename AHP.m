@@ -1,4 +1,4 @@
-*附录1 层次分析法(AHP)的Matlab实现*
+%附录1 层次分析法(AHP)的Matlab实现%
 A=input('成对比较矩阵');
 [n,n]=size(A);
 [v,d]=eig(A);
