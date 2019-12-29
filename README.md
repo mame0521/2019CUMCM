@@ -1,6 +1,8 @@
 # 2019CMCM
 **2019 Chinese Contemporary Undergraduate Mathematical Contest in Modeling**
 
+**(Note: MathJax Plugin for Github is required in your browser to display the mathematical formulas of this paper)**
+
 机场出租车司机决策模型和乘车点及载客收益优化 
 ==============================
 ------基于效用模型，排队论和动态仿真 
@@ -87,7 +89,6 @@
 | ρ       | 服务器的服务强度                                       |
 | $\gamma$ | 司机期望候车人数                                       |
 
-![](media/5e5c258e75157690babb5e5a9aa4605d.emf)
 
 问题一的模型建立与求解
 ======================
