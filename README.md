@@ -206,18 +206,14 @@ $$\text{Ri} = \begin{bmatrix} a_{11} & \cdots & a_{15} \\  \vdots & \ddots &
 \omega_{1},\omega_{2}{,\omega}_{3,}\omega_{4},\omega_{5}
 \right)$$，其中$$\omega_{k}$$表示第k个因素对$$\alpha$$的影响权重。
 
-1.  各情况矫正系数
+2.  各情况矫正系数
 
 为根据以上指标实际情况计算$$\alpha$$，需对各项指标的可能情况进行量化，给出矫正系数$$\lambda$$。
-
-根据历史航班数据和历史出租车载客数据，可得各个因素组合影响下的$$\alpha$$值，计算某一固定时间t内$$\alpha\overset{\overline{}}{\alpha}$$。在该t时间段内，计算某一因素i
-(i为1-5之间的整数)在两种情况下所得$$\alpha$$的平均值$$\overset{\overline{}}{\alpha_{i1}}\overset{\overline{}}{\alpha_{i2}}$$，求得$$\lambda_{i1}
-=
-\overset{\overline{}}{\alpha_{i1}}/\overset{\overline{}}{\alpha}$$，$$\lambda_{i2}
-=
+根据历史航班数据和历史出租车载客数据，可得各个因素组合影响下的$$\alpha$$值，计算某一固定时间t内$$\alpha\overset{\overline{}}{\alpha}$$。在该t时间段内，计算某一因素i (i为1-5之间的整数)在两种情况下所得$$\alpha$$的平均值$$\overset{\overline{}}{\alpha_{i1}}\overset{\overline{}}{\alpha_{i2}}$$，求得$$\lambda_{i1}
+=\overset{\overline{}}{\alpha_{i1}}/\overset{\overline{}}{\alpha}$$，$$\lambda_{i2}=
 \overset{\overline{}}{\alpha_{i2}}/\overset{\overline{}}{\alpha}$$分别作为两种情况下的校正系数。
 
-1.  $$\alpha$$值的计算
+3.  $$\alpha$$值的计算
 
 综上所述，在任一情况下，可得
 
