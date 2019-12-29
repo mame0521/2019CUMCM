@@ -96,8 +96,10 @@
 
 其中，方案1的流程如下：
 ![](media/project1_flow.png)
+
 方案2的流程如下：
 ![](media/project2_flow.png)
+
 在相同时间内，方案1的预期收益 =
 起步价+从机场载客里程数×里程单价，方案2的预期收益为 =
 起步价+从市区载客里程数×里程单价。由于出租车的起步价与里程单价不随司机决策所变化，因此对司机而言，我们可认为更优的方案
@@ -147,13 +149,13 @@ $$S_{1} = \left( t + T - t^{'} - t^{''} \right) \times \frac{v_{2}}{\beta}$$   (
 
 1.  $t \leq t^{'} + t^{''}$时，选择留在机场接客；
 
-2.  $t > t^{'} + t^{''}$时：
+2.  $t > t^{'} + t^{''}$时,
 
 $$\left\{ \begin{matrix} S_{0} \geq \left( t + T - t^{'} - t^{''} \right) \times
 \frac{v_{2}}{\beta}, \\ \  \\ S_{0} < \left( t + T - t^{'} - t^{''} \right)
 \times \frac{v_{2}}{\beta}, \\ \end{matrix} \right.\$$ (1-5)
 
-AHP模型确定$$\mathbf{\ }\mathbf{\alpha}\mathbf{\ }$$值
+AHP模型确定$\mathbf{\ }\mathbf{\alpha}\mathbf{\ }$值
 ------------------------------------------------------
 
 ### 指标构建
@@ -172,7 +174,7 @@ AHP模型确定$$\mathbf{\ }\mathbf{\alpha}\mathbf{\ }$$值
 
 ### AHP模型建立
 
-由于各指标为司机结合实际情况的主观判断，需应用层次分析法，通过历史数据,结合Saaty给出的1\~9级判断矩阵标度对构造判断矩阵$\text{Ri}$，利用Matlab程序（详见附录1）计算出各因素对$$\alpha$$的影响权重，对各项指标的实际取值进行加权,从而得出较为合理的$\alpha$值，进而计算出司机期望候车人数。
+由于各指标为司机结合实际情况的主观判断，需应用层次分析法，通过历史数据,结合Saaty给出的1\~9级判断矩阵标度对构造判断矩阵$\text{Ri}$，利用Matlab程序（详见附录1）计算出各因素对$\alpha$的影响权重，对各项指标的实际取值进行加权,从而得出较为合理的$\alpha$值，进而计算出司机期望候车人数。
 
 1.  成对比较矩阵的建立
 
@@ -181,10 +183,10 @@ AHP模型确定$$\mathbf{\ }\mathbf{\alpha}\mathbf{\ }$$值
 $$\text{Ri} = \begin{bmatrix} a_{11} & \cdots & a_{15} \\  \vdots & \ddots &
 \vdots \\ a_{51} & \cdots & a_{55} \\ \end{bmatrix}$$ ， (1-6)
 
-其中$$a_{\text{kl}}\$$表示$$k,l$$两种因素对$$\alpha$$的影响程度之比。$$a_{\text{kl}}\$$取值范围如表1-2，且$$a_{\text{kl}}
-= 1/a_{\text{lk}}$$。
+其中$a_{\text{kl}}\$表示$k,l$两种因素对$\alpha$的影响程度之比。$a_{\text{kl}}\$取值范围如表1-2，且$a_{\text{kl}}
+= 1/a_{\text{lk}}$。
 
-表3-2：$$a_{\text{kl}}$$不同取值对应含义
+表3-2：$a_{\text{kl}}$不同取值对应含义
 
 | 标度    | 含义                                 |
 |---------|--------------------------------------|
@@ -196,14 +198,17 @@ $$\text{Ri} = \begin{bmatrix} a_{11} & \cdots & a_{15} \\  \vdots & \ddots &
 | 2,4,6,8 | 表示上述两相邻等级的中间值           |
 | 倒数    | 表示相应两因素交换次序比较的重要性   |
 
-运用Matlab程序，可得$\text{Ri}$对应的权重向量$\omega = \left(
+运用Matlab程序，可得$\text{Ri}$对应的权重向量 
+$$\omega = \left(
 \omega_{1},\omega_{2}{,\omega}_{3,}\omega_{4},\omega_{5}
-\right)$，其中$\omega_{k}$表示第k个因素对$\alpha$的影响权重。
+\right)$$，
+
+其中$\omega_{k}$表示第k个因素对$\alpha$的影响权重。
 
 2.  各情况矫正系数
 
 为根据以上指标实际情况计算$\alpha$，需对各项指标的可能情况进行量化，给出矫正系数$\lambda$。
-根据历史航班数据和历史出租车载客数据，可得各个因素组合影响下的$$\alpha$$值，计算某一固定时间t内$\alpha\overset{\overline{}}{\alpha}$。在该t时间段内，计算某一因素$i$ ($i$为1-5之间的整数)在两种情况下所得$\alpha$的平均值$\overset{\overline{}}{\alpha_{i1}}\overset{\overline{}}{\alpha_{i2}}$，求得$\lambda_{i1}
+根据历史航班数据和历史出租车载客数据，可得各个因素组合影响下的$\alpha$值，计算某一固定时间t内$\alpha\overset{\overline{}}{\alpha}$。在该t时间段内，计算某一因素$i$ ($i$为1-5之间的整数)在两种情况下所得$\alpha$的平均值$\overset{\overline{}}{\alpha_{i1}}\overset{\overline{}}{\alpha_{i2}}$，求得$\lambda_{i1}
 =\overset{\overline{}}{\alpha_{i1}}/\overset{\overline{}}{\alpha}$，$\lambda_{i2}=
 \overset{\overline{}}{\alpha_{i2}}/\overset{\overline{}}{\alpha}$分别作为两种情况下的校正系数。
 
@@ -214,12 +219,13 @@ $$\text{Ri} = \begin{bmatrix} a_{11} & \cdots & a_{15} \\  \vdots & \ddots &
 $$\alpha = \left( \omega_{1},\omega_{2}{,\omega}_{3},\omega_{4},\omega_{5}
 \right) \times
 {{(\lambda}_{1j_{1}},\lambda_{2j_{2}}{,\lambda}_{3j_{3}},\lambda_{4j_{4}}{,\lambda}_{5j_{5}})}^{T}
-\times \overset{\overline{}}{\alpha}\text{\ \ },   $$ (1-7)
+\times \overset{\overline{}}{\alpha}\text{\ \ }$$,    (1-7)
 
 其中$j_{k}$的取值依赖于观测到的实际情况。
 
-考虑司机到达机场的时间$t_{a}$，若$t_{a}$属于高峰时段，代入公式(1-1)，$t =t_{0} \times n_{c}$，若$t_{a}$不属于高峰时段，即新增乘客速率小于蓄车池新增车辆速率，代入公式(1-2)，$t= t_{0} \times n_{c} + \frac{2n_{c}}{n_{f} \times n_{p} \times
-\alpha}$。根据公式 (1-5)
+考虑司机到达机场的时间$t_{a}$，若$t_{a}$属于高峰时段，代入公式(1-1)，$t =t_{0} \times n_{c}$，若$t_{a}$不属于高峰时段，即新增乘客速率小于蓄车池新增车辆速率，代入公式(1-2)，
+$$t= t_{0} \times n_{c} + \frac{2n_{c}}{n_{f} \times n_{p} \times
+\alpha}$$。根据公式 (1-5)
 $$
 \left\{ \begin{matrix}
 S_{0} \geq \left( t + T - t^{'} - t^{''} \right) \times \frac{v_{2}}{\beta}, \\
