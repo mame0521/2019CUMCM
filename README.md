@@ -1,4 +1,4 @@
-# 2019CMCM
+# 2019CUMCM
 **2019 Chinese Contemporary Undergraduate Mathematical Contest in Modeling**
 
 **(Note: MathJax Plugin for Github is required in your browser to display the mathematical formulas of this paper)**
